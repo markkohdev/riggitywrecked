@@ -46,6 +46,10 @@
         level: 1
       },
       {
+        rule: "Any time anyone says \"bitch\", BITCH!",
+        level: 3
+      },
+      {
         rule: "Any time there's a reference to Morty being \"slow\"",
         level: 1
       },

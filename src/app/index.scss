@@ -134,6 +134,31 @@ md-content {
   padding: 5px 2px;
 }
 
+.logo {
+  max-width: 800px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.footer {
+  margin: 5px auto;
+  font-size: 12px;
+  color: white;
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically

@@ -1,17 +1,21 @@
 <div class="" layout-align="center" layout="row" layout-fill>
 
   <div class="container">
+    <div class="logo">
+      <img ng-src="assets/images/rm-logo.png" alt="logo" />
+    </div>
     <div class="content">
       <md-content>
-
-
-        I wanna get...
+        <h3>I wanna get...</h3>
         <md-radio-group ng-model="vm.rickedness">
           <md-radio-button value="1">Ricked</md-radio-button>
-          <md-radio-button value="2" class="md-hue-2">Schwifty</md-radio-button>
-          <md-radio-button value="3" class="md-hue-3">Riggity Riggity Wrecked!!</md-radio-button>
+          <md-radio-button value="2" class="md-hue-2"><strong>Schwifty</strong></md-radio-button>
+          <md-radio-button value="3" class="md-hue-3"><strong><i>Riggity Riggity Wrecked!!</i></strong></md-radio-button>
         </md-radio-group>
 
+        <md-divider></md-divider>
+
+        <h3>Drink, son!</h3>
         <ol>
           <li class="drink-rule" ng-repeat="rule in vm.rules | filter: vm.ricked">
           {{rule.rule}}
@@ -20,6 +24,10 @@
 
       </md-content>
     </div>
+    <div class="footer">
+      Made with <i class="zmdi zmdi-favorite"></i> by <a href="http://markkoh.net">Mark Koh</a>
+    </div>
+
   </div>
 
 </div>
