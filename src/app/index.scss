@@ -6,6 +6,7 @@
 // endbower
 
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,600);
 
 @font-face {
   font-family: 'Material Icons';
@@ -45,7 +46,19 @@
 }
 
 html {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background: url(../assets/images/wallpaper.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+html, body {
+  overflow: auto;
 }
 
 [layout=row] {
@@ -97,14 +110,11 @@ md-content {
 .container {
   max-width: 750px;
   margin: 50px auto;
-  // text-align: center;
-  md-content: {
+
+  md-content {
+    // background: rgb(255,255,255);
     padding: 20px;
   }
-}
-
-html, body, .full-height {
-  height:100%;
 }
 
 .full-background {
@@ -113,11 +123,15 @@ html, body, .full-height {
   position: absolute;
   top: 0;
   left: 0;
-  overflow: scroll;
+  // overflow: scroll;
 }
 
 .rm-bg {
-  background-image: url(../assets/images/wallpaper.png);
+  // background-image: url(../assets/images/wallpaper.png);
+}
+
+.drink-rule {
+  padding: 5px 2px;
 }
 
 /**

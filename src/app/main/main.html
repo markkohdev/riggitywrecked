@@ -1,22 +1,25 @@
-<div class="full-background full-height rm-bg" layout-align="center center" layout="row" layout-fill>
+<div class="" layout-align="center" layout="row" layout-fill>
 
   <div class="container">
-    <md-content>
+    <div class="content">
+      <md-content>
 
-      I wanna get...
-      <md-radio-group ng-model="vm.rickedness">
-        <md-radio-button value="Drunk" class="md-primary">Drunk</md-radio-button>
-        <md-radio-button value="Schwifty">Schwifty</md-radio-button>
-        <md-radio-button value="Recked">Riggity Riggity Wrecked!!</md-radio-button>
-      </md-radio-group>
 
-      <ol>
-        <li ng-repeat="rule in vm.rules">
-        {{rule.rule}}
-        </li>
-      </ol>
+        I wanna get...
+        <md-radio-group ng-model="vm.rickedness">
+          <md-radio-button value="1">Ricked</md-radio-button>
+          <md-radio-button value="2" class="md-hue-2">Schwifty</md-radio-button>
+          <md-radio-button value="3" class="md-hue-3">Riggity Riggity Wrecked!!</md-radio-button>
+        </md-radio-group>
 
-    </md-content>
+        <ol>
+          <li class="drink-rule" ng-repeat="rule in vm.rules | filter: vm.ricked">
+          {{rule.rule}}
+          </li>
+        </ol>
+
+      </md-content>
+    </div>
   </div>
 
 </div>
