@@ -1,0 +1,22 @@
+<div class="full-background full-height rm-bg" layout-align="center center" layout="row" layout-fill>
+
+  <div class="container">
+    <md-content>
+
+      I wanna get...
+      <md-radio-group ng-model="vm.rickedness">
+        <md-radio-button value="Drunk" class="md-primary">Drunk</md-radio-button>
+        <md-radio-button value="Schwifty">Schwifty</md-radio-button>
+        <md-radio-button value="Recked">Riggity Riggity Wrecked!!</md-radio-button>
+      </md-radio-group>
+
+      <ol>
+        <li ng-repeat="rule in vm.rules">
+        {{rule.rule}}
+        </li>
+      </ol>
+
+    </md-content>
+  </div>
+
+</div>
