@@ -25,7 +25,15 @@
       </md-content>
     </div>
     <div class="footer">
-      <a href="https://github.com/markkohdev/riggitywrecked" target="_blank">Made with</a> <i class="zmdi zmdi-favorite"></i> by <a href="http://markkoh.net" target="_blank">Mark Koh</a>
+      <a ng-click="vm.githubClick()" href="https://github.com/markkohdev/riggitywrecked" target="_blank">Made with</a> <i class="zmdi zmdi-favorite"></i> by <a ng-click="vm.siteClick()" href="http://markkoh.net" target="_blank">Mark Koh</a>
+      |
+      <a href="https://github.com/markkohdev/riggitywrecked/issues" target="_blank">
+        Submit Feedback
+      </a>
+      |
+      <a ng-click="vm.fbShare()" href="{{vm.shareURL}}" target="_blank">
+        Share on <i class="zmdi zmdi-facebook-box"></i>
+      </a>
     </div>
 
   </div>

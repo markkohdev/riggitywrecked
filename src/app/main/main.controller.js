@@ -11,13 +11,31 @@
 
     $analytics.pageTrack('/');
 
+    vm.shareURL = "https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Frickandmortydrinkinggame.com";
     vm.rickedness = 1;
 
+
+    // Determine whether a give rule is in the current rickedness level
     vm.ricked = function(rule) {
       if (vm.rickedness >= rule.level){
         return true;
       }
       return false;
+    };
+
+    // Share on facebook was clicked, track this event
+    vm.fbShare = function() {
+      $analytics.eventTrack('shareClicked');
+    };
+
+    // Someone clicked my website!
+    vm.siteClick = function() {
+      $analytics.eventTrack('websiteClicked');
+    };
+
+    // Share on facebook was clicked, track this event
+    vm.githubClick = function() {
+      $analytics.eventTrack('githubClicked');
     };
 
     vm.rules = [
@@ -30,7 +48,11 @@
         level: 2
       },
       {
-        rule: "Any time Morty says \"Uhhh...Rick\"",
+        rule: "Any time Rick or Morty stutter",
+        level: 3
+      },
+      {
+        rule: "Any time Morty says \"Uhhh...Rick\" or \"Aw geez, Rick\"",
         level: 2
       },
       {
@@ -68,6 +90,10 @@
       {
         rule: "Any time Rick and Morty gets real",
         level: 1
+      },
+      {
+        rule: "Any time a penis is drawn into the scene",
+        level: 2
       },
       {
         rule: "Any time they break the 4th wall",
