@@ -49,27 +49,37 @@ html {
   font-family: 'Open Sans', sans-serif;
 }
 
-body {
-  background: url(../assets/images/wallpaper.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+// Full screen mode
+@media screen and (min-width: 1024px) {
+
+  .contain {
+    width: 50%;
+    margin: 50px auto;
+  }
+
+  .footer {
+      color: white;
+  }
+
 }
 
-html, body {
-  overflow: auto;
+.rm-bg {
+    background-image: url(../assets/images/wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+
+// html, body {
+//   overflow: auto;
+// }
 
 [layout=row] {
   flex-direction: row;
-}
-
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
 }
 
 md-toolbar.md-default-theme {
@@ -89,20 +99,6 @@ section.jumbotron {
   }
 }
 
-.techs {
-  display: flex;
-  flex-flow: row wrap;
-
-  md-card {
-    width: 30%;
-
-    img.pull-right {
-      float: right;
-      width: 100px;
-    }
-  }
-}
-
 md-content {
   width: 100%;
 }
@@ -115,19 +111,6 @@ md-content {
     // background: rgb(255,255,255);
     padding: 20px;
   }
-}
-
-.full-background {
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  // overflow: scroll;
-}
-
-.rm-bg {
-  // background-image: url(../assets/images/wallpaper.png);
 }
 
 .drink-rule {
