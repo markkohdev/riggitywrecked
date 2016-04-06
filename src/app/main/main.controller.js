@@ -6,7 +6,7 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, $analytics, rulez) {
+  function MainController($timeout, $analytics, rulez, Lightbox) {
     var vm = this;
 
     $analytics.pageTrack('/');
@@ -39,9 +39,21 @@
 
     vm.rules = rulez;
 
+    vm.images = [
+      {
+        'type': 'video',
+        'url': 'https://www.youtube.com/watch?v=khrAhOrSZQc',
+        'thumbUrl': 'https://i.ytimg.com/vi/khrAhOrSZQc/1.jpg'
+      }
+    ];
+
     var konami = new Konami();
-    konami.code = function() { alert('Konami code!'); }
+    konami.code = function() {
+      alert('Konami code!');
+      Lightbox.openModal(vm.images,0);
+    }
     konami.load();
+
 
   }
 })();

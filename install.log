@@ -1,0 +1,91 @@
+Ign http://archive.ubuntu.com trusty InRelease
+Get:1 http://archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+Get:2 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+Get:3 http://security.ubuntu.com trusty-security/main Sources [110 kB]
+Hit http://archive.ubuntu.com trusty Release.gpg
+Get:4 http://security.ubuntu.com trusty-security/universe Sources [35.2 kB]
+Get:5 http://security.ubuntu.com trusty-security/main amd64 Packages [455 kB]
+Get:6 http://archive.ubuntu.com trusty-updates/main Sources [271 kB]
+Hit https://deb.nodesource.com trusty InRelease
+Hit https://deb.nodesource.com trusty/main amd64 Packages
+Get:7 https://deb.nodesource.com trusty/main Translation-en_US
+Get:8 http://security.ubuntu.com trusty-security/universe amd64 Packages [126 kB]
+Get:9 http://security.ubuntu.com trusty-security/main Translation-en [250 kB]
+Get:10 http://archive.ubuntu.com trusty-updates/universe Sources [152 kB]
+Ign https://deb.nodesource.com trusty/main Translation-en_US
+Get:11 http://security.ubuntu.com trusty-security/universe Translation-en [74.5 kB]
+Ign https://deb.nodesource.com trusty/main Translation-en
+Get:12 http://archive.ubuntu.com trusty-updates/main amd64 Packages [754 kB]
+Get:13 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [357 kB]
+Get:14 http://archive.ubuntu.com trusty-updates/main Translation-en [378 kB]
+Get:15 http://archive.ubuntu.com trusty-updates/universe Translation-en [187 kB]
+Hit http://archive.ubuntu.com trusty Release
+Hit http://archive.ubuntu.com trusty/main Sources
+Hit http://archive.ubuntu.com trusty/universe Sources
+Hit http://archive.ubuntu.com trusty/main amd64 Packages
+Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty/main Translation-en
+Hit http://archive.ubuntu.com trusty/universe Translation-en
+Ign http://archive.ubuntu.com trusty/main Translation-en_US
+Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+Fetched 3,283 kB in 5s (558 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ nodejs : Conflicts: npm
+/usr/bin/gulp -> /usr/lib/node_modules/gulp/bin/gulp.js
+gulp@3.9.1 /usr/lib/node_modules/gulp
+├── interpret@1.0.0
+├── pretty-hrtime@1.0.2
+├── deprecated@0.0.1
+├── archy@1.0.0
+├── minimist@1.2.0
+├── tildify@1.1.2 (os-homedir@1.0.1)
+├── v8flags@2.0.11 (user-home@1.1.1)
+├── semver@4.3.6
+├── chalk@1.1.3 (escape-string-regexp@1.0.5, supports-color@2.0.0, ansi-styles@2.2.1, strip-ansi@3.0.1, has-ansi@2.0.0)
+├── orchestrator@0.3.7 (stream-consume@0.1.0, sequencify@0.0.7, end-of-stream@0.1.5)
+├── liftoff@2.2.1 (extend@2.0.1, rechoir@0.6.2, flagged-respawn@0.3.2, findup-sync@0.3.0, resolve@1.1.7)
+├── vinyl-fs@0.3.14 (graceful-fs@3.0.8, strip-bom@1.0.0, defaults@1.0.3, vinyl@0.4.6, mkdirp@0.5.1, through2@0.6.5, glob-stream@3.1.18, glob-watcher@0.0.6)
+└── gulp-util@3.0.7 (array-differ@1.0.0, array-uniq@1.0.2, beeper@1.1.0, lodash._reescape@3.0.0, lodash._reevaluate@3.0.0, lodash._reinterpolate@3.0.0, object-assign@3.0.0, replace-ext@0.0.1, has-gulplog@0.1.0, fancy-log@1.2.0, gulplog@1.0.0, lodash.template@3.6.2, vinyl@0.5.3, through2@2.0.1, multipipe@0.1.2, dateformat@1.0.12)
+/usr/bin/bower -> /usr/lib/node_modules/bower/bin/bower
+bower@1.7.9 /usr/lib/node_modules/bower
+Successfully installed sass-3.4.22
+1 gem installed
+Installing ri documentation for sass-3.4.22...
+Installing RDoc documentation for sass-3.4.22...
+Building native extensions.  This could take a while...
+    Compass is charityware. If you love it, please donate on our behalf at http://umdf.org/compass Thanks!
+Successfully installed multi_json-1.11.2
+Successfully installed compass-core-1.0.3
+Successfully installed compass-import-once-1.0.5
+Successfully installed chunky_png-1.3.5
+Successfully installed rb-fsevent-0.9.7
+Successfully installed ffi-1.9.10
+Successfully installed rb-inotify-0.9.7
+Successfully installed compass-1.0.3
+8 gems installed
+Installing ri documentation for multi_json-1.11.2...
+Installing ri documentation for compass-core-1.0.3...
+Installing ri documentation for compass-import-once-1.0.5...
+Installing ri documentation for chunky_png-1.3.5...
+Installing ri documentation for rb-fsevent-0.9.7...
+Installing ri documentation for ffi-1.9.10...
+Installing ri documentation for rb-inotify-0.9.7...
+Installing ri documentation for compass-1.0.3...
+Installing RDoc documentation for multi_json-1.11.2...
+Installing RDoc documentation for compass-core-1.0.3...
+Installing RDoc documentation for compass-import-once-1.0.5...
+Installing RDoc documentation for chunky_png-1.3.5...
+Installing RDoc documentation for rb-fsevent-0.9.7...
+Installing RDoc documentation for ffi-1.9.10...
+Installing RDoc documentation for rb-inotify-0.9.7...
+Installing RDoc documentation for compass-1.0.3...

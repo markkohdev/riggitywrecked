@@ -6,3 +6,4 @@ coverage/
 .tmp/
 dist/
 .npm-debug.log
+install.log

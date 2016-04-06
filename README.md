@@ -8,6 +8,21 @@ My roomate and I started coming up with rules for the show because we didn't lik
 
 Written in AngularJS, with love to Gulp, Angular Material, and of course, [Adult Swim]
 
+### Installation
+Run this kush (if on Debian linux)
+```
+sudo ./install.sh
+make install
+```
+that should be it I think?
+
+### Running
+Run this
+```
+make run
+```
+then go to http://localhost:5000 and get crunk
+
 ### TODO
  - [ ] Add the ability to create and save (to local storage) your own rules
  - [ ] Add konami code easter egg to bring up random R&M youtube videos
