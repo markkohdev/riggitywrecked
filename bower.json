@@ -26,6 +26,7 @@
   },
   "resolutions": {
     "jquery": "~2.1.4",
-    "angular": "~1.4.2"
+    "angular": "~1.4.2",
+    "angulartics": "~1.0.0"
   }
 }
