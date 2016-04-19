@@ -6,7 +6,7 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($scope, $timeout, $analytics, $stateParams, rulez, Lightbox) {
+  function MainController($scope, $timeout, $analytics, $stateParams, rulez, $mdDialog, $mdMedia) {
     var vm = this;
 
     $analytics.pageTrack('/');
@@ -59,20 +59,31 @@
 
     vm.rules = rulez;
 
-    vm.images = [
-      {
-        'type': 'video',
-        'url': 'https://www.youtube.com/watch?v=khrAhOrSZQc',
-        'thumbUrl': 'https://i.ytimg.com/vi/khrAhOrSZQc/1.jpg'
-      }
-    ];
-
+    // Detect the konami code and spawn the video dialog
     var konami = new Konami();
     konami.code = function() {
-      alert('Konami code!');
-      Lightbox.openModal(vm.images,0);
+      vm.konamiVid();
     }
     konami.load();
+
+    // Spawn that ish
+    vm.konamiVid = function() {
+      var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && $scope.customFullscreen;
+      $mdDialog.show({
+        controller: 'KonamiController',
+        controllerAs: 'vm',
+        bindToController: true,
+        templateUrl: 'app/main/konami.tmpl.html',
+        parent: angular.element(document.body),
+        clickOutsideToClose:true,
+      });
+
+      // $scope.$watch(function() {
+      //   return $mdMedia('xs') || $mdMedia('sm');
+      // }, function(wantsFullScreen) {
+      //   $scope.customFullscreen = (wantsFullScreen === true);
+      // });
+    };
 
 
   }

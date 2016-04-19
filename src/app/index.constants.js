@@ -122,16 +122,6 @@
         who: 1
       },
       {
-        rule: "Any time they smoke anything",
-        level: 420,
-        who: 0
-      },
-      {
-        rule: "Any time a penis is drawn into the scene",
-        level: 420,
-        who: 0
-      },
-      {
         rule: "Any time you recognize a random alien species",
         level: 420,
         who: 1
@@ -140,6 +130,16 @@
         rule: "Any time you unintentionally quote the show",
         level: 420,
         who: 1
+      },
+      {
+        rule: "Any time they smoke anything",
+        level: 420,
+        who: 0
+      },
+      {
+        rule: "Any time they break the 4th wall",
+        level: 420,
+        who: 0
       },
     ]);
 
