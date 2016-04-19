@@ -2,7 +2,8 @@
 
   <div class="container">
     <div class="logo">
-      <img ng-src="assets/images/rm-logo.png" alt="logo" />
+      <img ng-src="assets/images/rm-logo.png" ng-hide="vm.fourtwenty" alt="logo" />
+      <img ng-src="assets/images/rm-logo-420.png" ng-show="vm.fourtwenty" alt="logo" />
     </div>
     <div class="content">
       <md-content>
@@ -11,13 +12,14 @@
           <md-radio-button value="1">Ricked</md-radio-button>
           <md-radio-button value="2" class="md-hue-2"><strong>Schwifty</strong></md-radio-button>
           <md-radio-button value="3" class="md-hue-3"><strong><i>Riggity Riggity Wrecked!!</i></strong></md-radio-button>
-          <md-radio-button value="420" class="md-hue-3"><span class="blazed">BLA-BLA-BLA-BLAZEDDDD</span></md-radio-button>
+          <md-radio-button value="420" class="md-hue-3"><img ng-src="/assets/images/pot-leaf-icon.png" alt="pot" width="30"/><span class="blazed">Riggity Riggity Ripped!!</span><img ng-src="/assets/images/pot-leaf-icon.png" alt="pot" width="30"/></md-radio-button>
         </md-radio-group>
 
         <md-divider></md-divider>
 
         <h3 ng-show="!vm.fourtwenty">Drink, son!</h3>
         <h3 ng-show="vm.fourtwenty">Take a hit, dawg!</h3>
+        <p ng-show="vm.fourtwenty">Play this game with your friends, whoever you catch breaking the rule has to take a hit.  If one of the rules happens in the show, you pass the bowl around.  Happy Holidaze! </p>
         <ol>
           <li class="drink-rule" ng-repeat="rule in vm.rules | filter: vm.ricked">
           {{rule.rule}}

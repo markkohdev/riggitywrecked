@@ -6,13 +6,13 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($scope, $timeout, $analytics, rulez, Lightbox) {
+  function MainController($scope, $timeout, $analytics, $stateParams, rulez, Lightbox) {
     var vm = this;
 
     $analytics.pageTrack('/');
 
     vm.shareURL = "https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Frickandmortydrinkinggame.com";
-    vm.rickedness = 1;
+    vm.rickedness = $stateParams["rickedness"] || 1;
 
     vm.fourtwenty = false;
 
@@ -26,6 +26,8 @@
         else {
           vm.fourtwenty = false;
         }
+
+        window.location.hash = "#/"+vm.rickedness;
     });
 
     // Determine whether a give rule is in the current rickedness level
