@@ -1,4 +1,4 @@
-<div class="rm-bg" layout-align="center" layout="row" layout-fill>
+<div class="rm-bg" ng-class="{'fourtwenty': vm.fourtwenty}" layout-align="center" layout="row" layout-fill>
 
   <div class="container">
     <div class="logo">
@@ -7,15 +7,17 @@
     <div class="content">
       <md-content>
         <h3>I wanna get...</h3>
-        <md-radio-group ng-model="vm.rickedness">
+        <md-radio-group ng-model="vm.rickedness" ng-change="">
           <md-radio-button value="1">Ricked</md-radio-button>
           <md-radio-button value="2" class="md-hue-2"><strong>Schwifty</strong></md-radio-button>
           <md-radio-button value="3" class="md-hue-3"><strong><i>Riggity Riggity Wrecked!!</i></strong></md-radio-button>
+          <md-radio-button value="420" class="md-hue-3"><span class="blazed">BLA-BLA-BLA-BLAZEDDDD</span></md-radio-button>
         </md-radio-group>
 
         <md-divider></md-divider>
 
-        <h3>Drink, son!</h3>
+        <h3 ng-show="!vm.fourtwenty">Drink, son!</h3>
+        <h3 ng-show="vm.fourtwenty">Take a hit, dawg!</h3>
         <ol>
           <li class="drink-rule" ng-repeat="rule in vm.rules | filter: vm.ricked">
           {{rule.rule}}

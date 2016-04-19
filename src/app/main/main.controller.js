@@ -6,7 +6,7 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, $analytics, rulez, Lightbox) {
+  function MainController($scope, $timeout, $analytics, rulez, Lightbox) {
     var vm = this;
 
     $analytics.pageTrack('/');
@@ -14,9 +14,27 @@
     vm.shareURL = "https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Frickandmortydrinkinggame.com";
     vm.rickedness = 1;
 
+    vm.fourtwenty = false;
+
+    $scope.$watch(function () {
+       return vm.rickedness;
+    },function(value){
+        if (value == 420) {
+          // #420blazeit
+          vm.fourtwenty = true;
+        }
+        else {
+          vm.fourtwenty = false;
+        }
+    });
+
     // Determine whether a give rule is in the current rickedness level
     vm.ricked = function(rule) {
-      if (vm.rickedness >= rule.level){
+      if (vm.rickedness >= rule.level && vm.rickedness != 420){
+        return true;
+      }
+      else if (rule.level == 420 && vm.rickedness == 420) {
+        // #420blazeit
         return true;
       }
       return false;

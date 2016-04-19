@@ -7,6 +7,7 @@
 
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic,600);
+@import url(https://fonts.googleapis.com/css?family=Akronim);
 
 @font-face {
   font-family: 'Material Icons';
@@ -64,14 +65,18 @@ html {
 }
 
 .rm-bg {
-    background-image: url(../assets/images/wallpaper.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  background-image: url(../assets/images/wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.rm-bg.fourtwenty {
+  background-image: url(../assets/images/wallpaper_420_dark.jpg) !important;
 }
 
 // html, body {
@@ -101,6 +106,7 @@ section.jumbotron {
 
 md-content {
   width: 100%;
+  background-color: rgba(255,255,255,0.9);
 }
 
 .container {
@@ -137,6 +143,21 @@ md-content {
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+}
+
+.blazed {
+  font-family: 'Akronim', "Trebuchet MS";
+  color: #058819;
+  font-size: 1.7em;
+}
+
+.fourtwenty {
+  .footer {
+    color: black;
+    a {
+      color: black;
     }
   }
 }
