@@ -9,10 +9,11 @@
       <md-content>
         <h3>I wanna get...</h3>
         <md-radio-group ng-model="vm.rickedness" ng-change="">
+          <md-radio-button value="420" class="md-hue-3" ng-if="vm.smokingGameSite"><img ng-src="/assets/images/pot-leaf-icon.png" alt="pot" width="30"/><span class="blazed">Riggity Riggity Ripped!!</span><img ng-src="/assets/images/pot-leaf-icon.png" alt="pot" width="30"/></md-radio-button>
           <md-radio-button value="1">Ricked</md-radio-button>
           <md-radio-button value="2" class="md-hue-2"><strong>Schwifty</strong></md-radio-button>
           <md-radio-button value="3" class="md-hue-3"><strong><i>Riggity Riggity Wrecked!!</i></strong></md-radio-button>
-          <md-radio-button value="420" class="md-hue-3"><img ng-src="/assets/images/pot-leaf-icon.png" alt="pot" width="30"/><span class="blazed">Riggity Riggity Ripped!!</span><img ng-src="/assets/images/pot-leaf-icon.png" alt="pot" width="30"/></md-radio-button>
+          <md-radio-button value="420" class="md-hue-3" ng-if="!vm.smokingGameSite"><img ng-src="/assets/images/pot-leaf-icon.png" alt="pot" width="30"/><span class="blazed">Riggity Riggity Ripped!!</span><img ng-src="/assets/images/pot-leaf-icon.png" alt="pot" width="30"/></md-radio-button>
         </md-radio-group>
 
         <md-divider></md-divider>

@@ -12,7 +12,17 @@
     $analytics.pageTrack('/');
 
     vm.shareURL = "https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Frickandmortydrinkinggame.com";
-    vm.rickedness = $stateParams["rickedness"] || 1;
+
+    // Change the default level based on the hostname
+    vm.smokingGameSite = false;
+    var hostname = window.location.hostname;
+    if (hostname.indexOf("rickandmortysmokinggame") > -1) {
+      vm.rickedness = $stateParams["rickedness"] || 420;
+      vm.smokingGameSite = true;
+    }
+    else {
+      vm.rickedness = $stateParams["rickedness"] || 1;
+    }
 
     vm.fourtwenty = false;
 
